@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Калькулятор обоев</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>{{title}}</h1>
+            <b><p>Заполните все поля ниже: </p></b>
+            <form>
+                <div class="form-group">
+                <label for="">Ширина комнаты:</label>
+                <input name="width_room" class="form-control" type="width_room" placeholder="в метрах" required>
+                </div>
+                <div class="form-group">
+                <label for="">Длина комнаты:</label>
+                <input name="lenght_room" class="form-control" type="lenght_room" placeholder="в метрах" required>
+                </div>
+                <div class="form-group">
+                <label for="">Высота комнаты:</label>
+                <input name="height_room" class="form-control" type="height_room" placeholder="в метрах" required>
+                </div>
+                <div class="form-group">
+                <label for="">Ширина обоев:</label>
+                <input name="width_wallpapers" class="form-control" type="width_wallpapers" placeholder="в метрах" required>
+                </div>
+                <div class="form-group">
+                <label for="">Длина обоев:</label>
+                <input name="lenght_wallpapers" class="form-control" type="lenght_wallpapers" placeholder="в метрах" required>
+                </div>
+                <button class="btn btn-primary">Рассчитать</button>
+            </form>
+            {% if calculate %}
+            <div class="alert alert-{{level}}">Необходимо купить: {{calculate}}</div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
