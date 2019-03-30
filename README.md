@@ -1,2 +1,2 @@
-# Ozon Web ver.
+# Wallpapers calc Web ver.
 
