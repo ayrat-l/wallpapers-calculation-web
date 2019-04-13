@@ -14,32 +14,32 @@
     <div class="row">
         <div class="col">
             <h1>{{title}}</h1>
-            <b><p>Заполните все поля ниже: </p></b>
+            <b><p>Заполните все поля ниже</p></b>
             <form>
                 <div class="form-group">
                 <label for="">Ширина комнаты:</label>
-                <input name="width_room" class="form-control" type="text" placeholder="в метрах" required>
+                <input name="width_room" class="form-control" type="text" value="{{width_room}}" placeholder="в метрах" required>
                 </div>
                 <div class="form-group">
                 <label for="">Длина комнаты:</label>
-                <input name="length_room" class="form-control" type="text" placeholder="в метрах" required>
+                <input name="length_room" class="form-control" type="text" value="{{length_room}}" placeholder="в метрах" required>
                 </div>
                 <div class="form-group">
                 <label for="">Высота комнаты:</label>
-                <input name="height_room" class="form-control" type="text" placeholder="в метрах" required>
+                <input name="height_room" class="form-control" type="text" value="{{height_room}}" placeholder="в метрах" required>
                 </div>
                 <div class="form-group">
                 <label for="">Ширина обоев:</label>
-                <input name="width_wallpapers" class="form-control" type="text" placeholder="в метрах" required>
+                <input name="width_wallpapers" class="form-control" type="text" value="{{width_wallpapers}}" placeholder="в метрах" required>
                 </div>
                 <div class="form-group">
                 <label for="">Длина обоев:</label>
-                <input name="length_wallpapers" class="form-control" type="text" placeholder="в метрах" required>
+                <input name="length_wallpapers" class="form-control" type="text" value="{{length_wallpapers}}" placeholder="в метрах" required>
                 </div>
                 <button class="btn btn-primary">Рассчитать</button>
             </form>
             {% if calculate %}
-            <div class="alert alert-{{level}}">Необходимо купить: {{calculate}}</div>
+            <div class="alert alert-{{level}}">Необходимо купить рулонов в количестве: {{calculate}} шт.</div>
             {% endif %}
         </div>
     </div>
